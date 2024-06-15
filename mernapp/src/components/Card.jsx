@@ -1,10 +1,17 @@
 import React from "react";
-
+import burgerImage from "../assets/burger.jpg";
 export default function Card() {
   return (
     <>
-      <span className="card" style={{ width: "18rem", maxHeight: "360px" }}>
-        <img src="#" className="card-img-top" alt="Placeholder" />
+      <span
+        className="card"
+        style={{
+          width: "18rem",
+          maxHeight: "360px",
+          objectFit: "contain !important",
+        }}
+      >
+        <img src={burgerImage} className="card-img-top" alt="Placeholder" />
         <div className="card-body">
           <h5 className="card-title">Card title</h5>
           <p className="card-text">

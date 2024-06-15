@@ -11,7 +11,7 @@ export default function Carousel() {
         id="carouselExampleControls"
         className="carousel slide carousek-fade"
         data-bs-ride="carousel"
-        height="500px"
+        style={{ objectFit: "contain !important" }}
       >
         <div className="carousel-inner">
           <div className="carousel-caption" style={{ zIndex: "10" }}>

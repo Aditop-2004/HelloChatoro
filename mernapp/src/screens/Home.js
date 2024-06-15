@@ -13,7 +13,10 @@ export default function Home() {
       <div>
         <Carousel></Carousel>
       </div>
-      <div>
+      <div
+        className="mt-5 mb-5"
+        style={{ display: "flex", justifyContent: "space-evenly" }}
+      >
         <Card></Card>
         <Card></Card>
         <Card></Card>

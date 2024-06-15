@@ -6,7 +6,7 @@ export default function Navbar() {
     <div>
       <nav
         className="navbar navbar-expand-lg bg-body-tertiary"
-        style={{ backgroundColor: "#FFF5E1" }}
+        style={{ backgroundColor: "#FFF5E1 !important" }}
       >
         <div className="container-fluid">
           <Link to="/" className="navbar-brand fs-1 fst-italic dm-sans-adi">
