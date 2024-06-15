@@ -17,7 +17,7 @@ const connectToDatabase = async () => {
     const foodItemsCollection = db.collection("food_items");
     const data = await foodItemsCollection.find({}).toArray();
 
-    console.log("Fetched data:", data);
+    //console.log("Fetched data:", data);
   } catch (error) {
     console.error("Error connecting to the database", error);
   }
