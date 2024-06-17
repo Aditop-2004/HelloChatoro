@@ -3,11 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <div>
-      <nav
-        className="navbar navbar-expand-lg bg-body-tertiary"
-        style={{ backgroundColor: "#FFF5E1 !important" }}
-      >
+    <div style={{ backgroundColor: "#FFF5E1" }}>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <Link to="/" className="navbar-brand fs-1 fst-italic dm-sans-adi">
             HelloChatoro
@@ -33,6 +30,11 @@ export default function Navbar() {
               <li className="nav-item">
                 <Link className="nav-link" to="/login">
                   Login
+                </Link>
+              </li>
+              <li>
+                <Link className="nav-link" to="/signup">
+                  SignUp
                 </Link>
               </li>
             </ul>
