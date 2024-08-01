@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 export default function Login() {
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
   });
 
+  let navigate=useNavigate()
   const onChange = (event) => {
     setCredentials({ ...credentials, [event.target.name]: event.target.value });
   };
@@ -29,7 +30,13 @@ export default function Login() {
       console.log(json);
       alert(json.errors[0].msg);
     }
-  };
+
+    if (json.success) { 
+      localStorage.setItem("authToken", json.authToken);
+      console.log(localStorage.getItem("authToken"))
+           navigate("/");
+    }
+      };
   return (
     <>
       <section className="vh-100" style={{ backgroundColor: "#FFF5E1" }}>
@@ -90,7 +97,7 @@ export default function Login() {
                             type="submit"
                             className="btn btn-primary btn-lg me-3"
                           >
-                            Register
+                            Login
                           </button>
 
                           <Link to="/signup" className="btn btn-success btn-lg">

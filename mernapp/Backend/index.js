@@ -18,6 +18,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 app.use("/api", require("./routes/CreateUser"));
+app.use("/api", require("./routes/DisplayData"));
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
